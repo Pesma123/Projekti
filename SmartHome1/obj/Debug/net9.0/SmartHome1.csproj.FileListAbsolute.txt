@@ -1,0 +1,14 @@
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\bin\Debug\net9.0\SmartHome1.exe
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\bin\Debug\net9.0\SmartHome1.deps.json
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\bin\Debug\net9.0\SmartHome1.runtimeconfig.json
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\bin\Debug\net9.0\SmartHome1.dll
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\bin\Debug\net9.0\SmartHome1.pdb
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.AssemblyInfoInputs.cache
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.AssemblyInfo.cs
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.csproj.CoreCompileInputs.cache
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.dll
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\refint\SmartHome1.dll
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.pdb
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\SmartHome1.genruntimeconfig.cache
+C:\Users\pihla\Desktop\SmartHome1\SmartHome1\obj\Debug\net9.0\ref\SmartHome1.dll
