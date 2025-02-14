@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Hangman Game</h1>
+    <svg id="hangman" width="200" height="250">
+        <line x1="10" y1="230" x2="100" y2="230" stroke="black" stroke-width="4"/>
+        <line x1="55" y1="230" x2="55" y2="30" stroke="black" stroke-width="4"/>
+        <line x1="55" y1="30" x2="120" y2="30" stroke="black" stroke-width="4"/>
+        <line x1="120" y1="30" x2="120" y2="50" stroke="black" stroke-width="4"/>
+        <circle cx="120" cy="70" r="20" stroke="black" stroke-width="4" fill="none" class="hangman-part"/>
+        <line x1="120" y1="90" x2="120" y2="150" stroke="black" stroke-width="4" class="hangman-part"/>
+        <line x1="120" y1="100" x2="100" y2="130" stroke="black" stroke-width="4" class="hangman-part"/>
+        <line x1="120" y1="100" x2="140" y2="130" stroke="black" stroke-width="4" class="hangman-part"/>
+        <line x1="120" y1="150" x2="100" y2="190" stroke="black" stroke-width="4" class="hangman-part"/>
+        <line x1="120" y1="150" x2="140" y2="190" stroke="black" stroke-width="4" class="hangman-part"/>
+    </svg>
+    
+    <p>Guess the word before you run out of attempts!</p>
+    <div id="word-display"></div>
+    <p>Wrong guesses: <span id="wrong-letters"></span></p>
+    <p>Attempts left: <span id="attempts-left">6</span></p>
+    <div id="keyboard"></div>
+    <p id="message"></p>
+    <button id="restart-btn">Restart Game</button>
+    
+    <script src="script.js"></script>
+</body>
+</html>
