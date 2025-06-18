@@ -1,0 +1,262 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>@ViewData["Title"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        /* ============ DESKTOP STIL ============ */
+        .desktop-container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .left {
+            background-color: #0f1a26;
+            flex: 1;
+            position: relative;
+        }
+
+        .top-logo {
+            width: 75%;
+            position: absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+            .top-logo:hover {
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 0.9;
+            }
+
+        .bottom-logo {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 40%;
+            height: auto;
+        }
+
+        .right {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .login-form {
+            width: 100%;
+            max-width: 300px;
+        }
+
+            .login-form h2 {
+                margin-bottom: 20px;
+                text-align: center;
+                color: #333;
+            }
+
+            .login-form input {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+
+            .login-form button {
+                width: 100%;
+                padding: 12px;
+                background-color: #2a4d79;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .login-form button:hover {
+                    background-color: #3f6db2;
+                }
+
+        /* ============ MOBILNA VERZIJA ============ */
+        .mobile-container {
+            display: none;
+        }
+
+        media (max-width: 768px) {
+            .desktop-container
+
+        {
+            display: none;
+        }
+
+        .mobile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #0f1a26;
+            min-height: 100vh;
+            padding: 30px 15px;
+        }
+
+        .mobile-logo {
+            max-width: 300px;
+            margin-bottom: 25px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+            .mobile-logo:hover {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+
+        .mobile-form {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 320px;
+        }
+
+            .mobile-form h2 {
+                color: #0f1a26;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .mobile-form input {
+                width: 100%;
+                padding: 12px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 6px;
+            }
+
+            .mobile-form button {
+                width: 100%;
+                padding: 12px;
+                background-color: #2a4d79;
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+
+                .mobile-form button:hover {
+                    background-color: #3f6db2;
+                }
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DESKTOP LAYOUT -->
+    <div class="desktop-container">
+        <div class="left">
+            <a href="/">
+                <img src="/slike/etf_sarajevo.png" alt="ETF Sarajevo" class="top-logo">
+            </a>
+            <img src="/slike/napr_transp_logo.png" alt="ETF Grb" class="bottom-logo">
+        </div>
+
+        <div class="right">
+            <form class="login-form" method="post">
+                <h2>Login</h2>
+
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <input asp-for="Input.Email" placeholder="Email Address" required />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+                <input asp-for="Input.Password" type="password" placeholder="Password" required />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                <div style="margin: 10px 0;">
+                    <label>
+                        <input asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+
+                <button type="submit">Log In</button>
+
+               <!--<div style="margin-top: 15px;">
+                    <p><a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a></p>
+                    <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a></p>
+                    <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a></p>
+                </div>-->
+            </form>
+        </div>
+    </div>
+
+    <!-- MOBILNA VERZIJA -->
+    <div class="mobile-container">
+        <a href="/">
+            <img src="/slike/etf_sarajevo.png" alt="ETF Sarajevo" class="mobile-logo">
+        </a>
+
+        <form class="mobile-form" method="post">
+            <h2>Login</h2>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+            <input asp-for="Input.Email" placeholder="Email Address" required />
+            <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+            <input asp-for="Input.Password" type="password" placeholder="Password" required />
+            <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+            <div style="margin: 10px 0;">
+                <label>
+                    <input asp-for="Input.RememberMe" />
+                    @Html.DisplayNameFor(m => m.Input.RememberMe)
+                </label>
+            </div>
+
+            <button type="submit">Log In</button>
+
+            <div style="margin-top: 15px;">
+                <p><a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a></p>
+                <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a></p>
+                <p><a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a></p>
+            </div>
+        </form>
+    </div>
+
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial" />
+    }
+
+</body>
+</html>

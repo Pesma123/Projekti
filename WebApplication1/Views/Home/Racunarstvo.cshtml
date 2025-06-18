@@ -1,0 +1,1405 @@
+﻿@{
+    ViewData["Title"] = "Računarstvo i informatika";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odsjek za racunarstvo i informatiku</title>
+<link rel="stylesheet" href="styles.css">
+<script src="navbar.js" defer></script>
+
+<link rel="stylesheet" href="~/css/racunarstvo.css" />
+<!-- Include Navbar -->
+  <div id="navbar-container"></div>
+
+  <section class="section title scroll-reveal">
+    <h1>Odsjek za računarstvo i informatiku</h1>
+  </section>
+
+  <section class="section">
+    <!-- Prvi ciklus sa 3 godine i 2 semestra po godini -->
+    <div class="cycles" id="cycle1">Prvi Ciklus</div>
+    <div class="cycle-details" id="cycle1-details">
+      <ul>
+        <li>
+          <div class="year" id="year1-1">Godina 1</div>
+          <div class="semesters" id="year1-1-semesters" style="display:none;">
+            <div class="semester" id="sem1">Semestar 1</div>
+            <div class="subjects" id="sem1-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Inženjerska Matematika I</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Mickey Mouse<br>
+                  Predavanja: 49<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Osnove elektrotehnike</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Shrek<br>
+                  Predavanja: 52<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Inženjerska fizika I</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Mickey Mouse<br>
+                  Predavanja: 39<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Linearna algebra i geometrija</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Lisa Simpson<br>
+                  Predavanja: 39<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Uvod u programiranje</div>
+                <div class="subject-info">
+                  Profesori: doc.dr. Munjeviti Jurić<br>
+                  Predavanja: 44<br>
+                  Vježbe: 26<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+            </div>
+            <div class="semester" id="sem2">Semestar 2</div>
+            <div class="subjects" id="sem2-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Inženjerska Matematika II</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Mickey Mouse<br>
+                  Predavanja: 52<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Tehnike Programiranja</div>
+                <div class="subject-info">
+                  Profesori: doc.dr. Munjeviti Jurić<br>
+                  Predavanja: 44<br>
+                  Vježbe: 26<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              <div class="subject-card">
+                <div class="subject-title">Matematička logika i teorija izračunljivosti</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Lisa Simpson<br>
+                  Predavanja: 42<br>
+                  Vježbe: 0<br>
+                  Tip: Izborni 1.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Vjerovatnoća i statistika</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Elsa Arendelle<br>
+                  Predavanja: 38<br>
+                  Vježbe: 0<br>
+                  Tip: Izborni 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Operativni sistemi</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Shrek<br>
+                  Predavanja: 38<br>
+                  Vježbe: 22<br>
+                  Tip: Izborni 1.3
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year" id="year1-2">Godina 2</div>
+          <div class="semesters" id="year1-2-semesters" style="display:none;">
+            <div class="semester" id="sem3">Semestar 3</div>
+            <div class="subjects" id="sem3-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Algoritmi i strukture podataka</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Bugs Bunny<br>
+                  Predavanja: 38<br>
+                  Vježbe: 22<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Logički dizajn</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Donatello<br>
+                  Predavanja: 38<br>
+                  Vježbe: 10<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Razvoj programskih rješenja</div>
+                <div class="subject-info">
+                  Profesori: doc.dr. Munjeviti Jurić<br>
+                  Predavanja: 38<br>
+                  Vježbe: 22<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Osnove baza podataka</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Megamind<br>
+                  Predavanja: 38<br>
+                  Vježbe: 22<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Diskretna matematika</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Lisa Simpson<br>
+                  Predavanja: 39<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Sistemsko programiranje</div>
+                <div class="subject-info">
+                  Profesori: doc.dr. Munjeviti Jurić<br>
+                  Predavanja: 36<br>
+                  Vježbe: 14<br>
+                  Tip: Izborni 3.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Numerički algoritmi</div>
+                <div class="subject-info">
+                  Profesori: doc.dr. Munjeviti Jurić<br>
+                  Predavanja: 35<br>
+                  Vježbe: 10<br>
+                  Tip: Izborni 3.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="semester" id="sem4">Semestar 4</div>
+            <div class="subjects" id="sem4-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Računarske arhitekture</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Rick Sanchez<br>
+                  Predavanja: 40<br>
+                  Vježbe: 20<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Osnove računarskih mreža</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Dory<br>
+                  Predavanja: 40<br>
+                  Vježbe: 14<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Objektno orijentisana analiza i dizajn</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Donatello<br>
+                  Predavanja: 38<br>
+                  Vježbe: 22<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Automati i formalni jezici</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Donatello<br>
+                  Predavanja: 38<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Razvoj mobilnih aplikacija</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. SpužvaBob Skockani<br>
+                  Predavanja: 35<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 4.1 ili 4.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">CAD-CAM inžinjering</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Donatello<br>
+                  Predavanja: 35<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 4.1 ili 4.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Ugradbeni sistemi</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Rick Sanchez<br>
+                  Predavanja: 28<br>
+                  Vježbe: 22<br>
+                  Tip: Izborni 4.1 ili 4.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Digitalno procesiranje signala</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Wall-E<br>
+                  Predavanja: 28<br>
+                  Vježbe: 10<br>
+                  Tip: Izborni 4.1 ili 4.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year" id="year1-3">Godina 3</div>
+          <div class="semesters" id="year1-3-semesters" style="display:none;">
+            <div class="semester" id="sem5">Semestar 5</div>
+            <div class="subjects" id="sem5-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Web tehnologije</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. SpužvaBob Skockani<br>
+                  Predavanja: 40<br>
+                  Vježbe: 20<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarska grafika</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Garfield<br>
+                  Predavanja: 22<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Osnove informacionih sistema</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Marge Simpson<br>
+                  Predavanja: 40<br>
+                  Vježbe: 10<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Osnove operacionih sistema</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Shrek<br>
+                  Predavanja: 40<br>
+                  Vježbe: 14<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Verifikacija i validacija softvera</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Winnie the Pooh<br>
+                  Predavanja: 30<br>
+                  Vježbe: 20<br>
+                  Tip: Izborni 5.1 ili 5.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Poslovni web sistemi</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. SpužvaBob Skockani<br>
+                  Predavanja: 35<br>
+                  Vježbe: 15<br>
+                  Tip:  Izborni 5.1 ili 5.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Programski jezici i prevodioci</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Bugs Bunny<br>
+                  Predavanja: 36<br>
+                  Vježbe: 14<br>
+                  Tip: Izborni 5.1 ili 5.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarsko modeliranje i simulacije</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Elsa Arendelle<br>
+                  Predavanja: 35<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 5.1 ili 5.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="semester" id="sem6">Semestar 6</div>
+            <div class="subjects" id="sem6-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Softver inžinjering</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Winnie the Pooh<br>
+                  Predavanja: 35<br>
+                  Vježbe: 25<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Projektovanje informacionih sistema</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Marge Simpson<br>
+                  Predavanja: 38<br>
+                  Vježbe: 11<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Vještačka inteligencija</div>
+                <div class="subject-info">
+                  Profesori: prof. dr. Gru<br>
+                  Predavanja: 35<br>
+                  Vježbe: 25<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Organizacija softverskog projekta</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Marge Simpson, doc. dr. Winnie the Pooh<br>
+                  Predavanja: 30<br>
+                  Vježbe: 20<br>
+                  Tip: Izborni 6.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Administracija računarskih mreža</div>
+                <div class="subject-info">
+                  Profesori: dr. sc. Dory<br>
+                  Predavanja: 35<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 6.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Dizajn i arhitektura softverskih sistema</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Winnie the Pooh<br>
+                  Predavanja: 30<br>
+                  Vježbe: 20<br>
+                  Tip: Izborni 6.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Projektovanje i sinteza digitalnih sistema</div>
+                <div class="subject-info">
+                  Profesori: doc. dr. Donatello<br>
+                  Predavanja: 30<br>
+                  Vježbe: 20<br>
+                  Tip: Izborni 6.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Predmet sa drugog fakulteta</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Izborni 6.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Završni rad</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">12</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Drugi ciklus sa 2 godine -->
+    <div class="cycles" id="cycle2">Drugi Ciklus</div>
+    <div class="cycle-details" id="cycle2-details">
+      <ul>
+        <li>
+          <div class="year" id="year2-1">Godina 1</div>
+          <div class="semesters" id="year2-1-semesters" style="display:none;">
+            <div class="semester" id="sem7">Semestar 1</div>
+            <div class="subjects" id="sem7-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Baze podataka</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Megamind<br>
+                  Predavanja: 35<br>
+                  Vježbe: 35<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Multimedijalni sistemi</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Garfield<br>
+                  Predavanja: 35<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Paralelni računarski sistemi</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Tony Stark<br>
+                  Predavanja: 40<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Prepoznavanje oblika i obrada slike</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Elsa Arendelle<br>
+                  Predavanja: 30<br>
+                  Vježbe: 25<br>
+                  Tip: Izborni 7.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Optimizacija resursa</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Tony Stark<br>
+                  Predavanja: 30<br>
+                  Vježbe: 25<br>
+                  Tip: Izborni 7.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="semester" id="sem8">Semestar 2</div>
+            <div class="subjects" id="sem8-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Operaciona istraživanja</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Lisa Simpson<br>
+                  Predavanja: 40<br>
+                  Vježbe: 25<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarske mreže</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Dory<br>
+                  Predavanja: 35<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Praktikum - napredne web tehnologije</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. SpužvaBob Skockani<br>
+                  Predavanja: 25<br>
+                  Vježbe: 45<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Praktikum - Poslovni informacioni sistemi</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Megamind<br>
+                  Predavanja: 20<br>
+                  Vježbe: 35<br>
+                  Tip: Izborni 8.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Numerička grafika i animacija</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Garfield<br>
+                  Predavanja: 30<br>
+                  Vježbe: 25<br>
+                  Tip: Izborni 8.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year" id="year2-2">Godina 2</div>
+          <div class="semesters" id="year2-2-semesters" style="display:none;">
+            <div class="semester" id="sem9">Semestar 3</div>
+            <div class="subjects" id="sem9-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Napredni softver inžinjering</div>
+                <div class="subject-info">
+                  Profesor: doc.dr. Munjeviti Jurić , doc. dr. Winnie the Pooh<br>
+                  Predavanja: 40<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarski sistemi u realnom vremenu</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Rick Sanchez<br>
+                  Predavanja: 35<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Metode i primjene vještačke inteligencije</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Gru<br>
+                  Predavanja: 38<br>
+                  Vježbe: 32<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">7</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Inovacije u projektovanju i menadžmentu informacionih sistema</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Marge Simpson<br>
+                  Predavanja: 30<br>
+                  Vježbe: 25<br>
+                  Tip: Izborni 9.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Tehnologija sigurnosti</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Dory<br>
+                  Predavanja: 30<br>
+                  Vježbe: 25<br>
+                  Tip: Izborni 9.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="semester" id="sem10">Semestar 4</div>
+            <div class="subjects" id="sem10-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Sistemi za podršku odlučivanju</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Winnie the Pooh<br>
+                  Predavanja: 35<br>
+                  Vježbe: 30<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">6</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Data mining</div>
+                <div class="subject-info">
+                  Profesor: Prof. dr. Elsa Arendelle<br>
+                  Predavanja: 35<br>
+                  Vježbe: 25<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">5</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarski algoritmi u bioinformatici</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Pikachu<br>
+                  Predavanja: 28<br>
+                  Vježbe: 22<br>
+                  Tip: Izborni 10.1
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">4</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Završni rad</div>
+                <div class="subject-info">
+                  Profesor: /<br>
+                  Predavanja: 0<br>
+                  Vježbe: 0<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">15</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Treći ciklus sa 3 godine -->
+    <div class="cycles" id="cycle3">Treći Ciklus</div>
+    <div class="cycle-details" id="cycle3-details">
+      <ul>
+        <li>
+          <div class="year" id="year3-1">Godina 1</div>
+          <div class="semesters" id="year3-1-semesters" style="display:none;">
+            <div class="semester" id="sem11">Semestar 1</div>
+            <div class="subjects" id="sem11-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Odabrani modeli i metode operacionih istraživanja</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Garfield<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredne metode razvoja softvera</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Gru<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredne računarske arhitekture</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Rick Sanchez<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredni algoritmi i strukture podataka</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Bugs Bunny<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Višekriterijalna optimizacija i odlučivanje</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Mickey Mouse<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Računarska vizuelna percepcija</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Wall-E<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Data warehouse</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Megamind<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Geoinformacioni sistemi</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Garfield<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Bioinformatika</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Pikachu<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Programski jezici i optimizacijski kompajleri</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Bugs Bunny<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredna poglavlja web tehnologija</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. SpužvaBob Skockani<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 1.1 ili 1.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Naučnoistraživački seminar 1.1</div>
+                <div class="subject-info">
+                  Mentor: /<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">14</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="semester" id="sem12">Semestar 2</div>
+            <div class="subjects" id="sem12-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Napredne metode vještačke inteligencije</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Wall-E<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Upravljanje IT servisima</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Tony Stark<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Ugrađeni i sistemi u realnom vremenu</div>
+                <div class="subject-info">
+                  Profesor: doc. dr. Garfield<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredne teme iz operativnih sistema</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Shrek<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredna poglavlja računarskih mreža</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Bugs Bunny<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Biološki inspirirana optimizacija i projektovanje</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Gru<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredne metode kompjuterske grafike u digitalizaciji kulturnog nasljeđa</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Bugs Bunny<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Napredne numeričke i statističke metode</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Mickey Mouse<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Metode pretraživanja informacija</div>
+                <div class="subject-info">
+                  Profesor: dr. sc. Pikachu<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <div class="subject-card">
+                <div class="subject-title">Data mining metode i modeli</div>
+                <div class="subject-info">
+                  Profesor: prof. dr. Elsa Arendelle<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Izborni 2.1 ili 2.2
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">8</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+              <!-- Naučnoistraživački seminar 1.2 -->
+              <div class="subject-card">
+                <div class="subject-title">Naučnoistraživački seminar 1.2</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: 15<br>
+                  Vježbe: 15<br>
+                  Tip: Obavezni
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">14</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year" id="year3-2">Godina 2</div>
+          <div class="semesters" id="year3-2-semesters" style="display:none;">
+            <div class="semester" id="sem13">Semestar 3</div>
+            <div class="subjects" id="sem13-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Naučnoistraživački seminar 2.1</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">18</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+          
+              <div class="subject-card">
+                <div class="subject-title">Priprema i odbrana teme doktorske disertacije (projekta)</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">12</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+          
+            </div>
+            <div class="semester" id="sem14">Semestar 4</div>
+            <div class="subjects" id="sem14-subjects">
+              <div class="subject-card">
+                <div class="subject-title">NIR: Priprema radne verzije doktorske disertacije</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">30</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="year" id="year3-3">Godina 3</div>
+          <div class="semesters" id="year3-3-semesters" style="display:none;">
+            <div class="semester" id="sem15">Semestar 5</div>
+            <div class="subjects" id="sem15-subjects">
+              <div class="subject-card">
+                <div class="subject-title">NIR: Prezentacija radne verzije doktorske disertacije</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">30</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+            </div>
+            <div class="semester" id="sem16">Semestar 6</div>
+            <div class="subjects" id="sem16-subjects">
+              <div class="subject-card">
+                <div class="subject-title">Odbrana doktorske disertacije</div>
+                <div class="subject-info">
+                  Profesori: /<br>
+                  Predavanja: /<br>
+                  Vježbe: /<br>
+                  Tip: Obavezan
+                </div>
+                <div class="ects-wrapper">
+                  <div class="ects-circle">30</div>
+                  <div class="ects-label">ECTS</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <script>
+    src="navbar.js"
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+      observer.observe(el);
+    });
+
+    document.querySelectorAll('.cycles').forEach(cycle => {
+      cycle.addEventListener('click', function () {
+        const detailsId = this.id + '-details';
+        const cycleDetails = document.getElementById(detailsId);
+        cycleDetails.style.display = cycleDetails.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+
+    document.querySelectorAll('.year').forEach(year => {
+      year.addEventListener('click', function () {
+        const yearSemesters = document.getElementById(this.id + '-semesters');
+        if (yearSemesters) {
+          yearSemesters.style.display = yearSemesters.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+
+    document.querySelectorAll('.semester').forEach(semester => {
+      semester.addEventListener('click', function () {
+        const subjects = document.getElementById(this.id + '-subjects');
+        if (subjects) {
+          subjects.style.display = subjects.style.display === 'block' ? 'none' : 'block';
+        }
+      });
+    });
+  </script>

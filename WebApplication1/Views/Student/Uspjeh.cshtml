@@ -1,0 +1,43 @@
+﻿@model IEnumerable<WebApplication1.Models.PredmetOcjenaModel>
+
+@{
+    ViewData["Title"] = "Uspjeh";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white mb-4">Moji predmeti i ocjene</h2>
+
+<table class="table table-dark table-striped">
+    <thead>
+        <tr>
+            <th>Predmet</th>
+            <th>Ocjena</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.Any())
+        {
+            <tr>
+                <td colspan="2" class="text-center text-white"><em>Nemate pohranjenih predmeta.</em></td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td class="text-white">@p.ImePredmeta</td>
+                    <td class="text-white">
+                        @(p.Ocjena.HasValue? p.Ocjena.Value.ToString() : "-")
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+<div class="mt-5 text-center">
+    <p class="text-white">Skeniraj QR kod za pregled uspjeha na mobilnom uređaju:</p>
+    <img src="@Url.Action("QRKodUspjeh", "Student")" alt="QR Kod za mobilni uspjeh" />
+</div>
+

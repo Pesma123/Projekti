@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Odsjeci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/odsjeci.css" />
+
+<section class="hero">
+    <h1>Odsjeci fakulteta</h1>
+    <p>Izaberite jedan od odsjeka kako biste saznali više.</p>
+</section>
+
+<section class="departments">
+    <a asp-controller="Home" asp-action="Automatika" class="card" style="background-image: url('/slike/automatika.jpg');">
+        <div class="overlay"></div>
+        <span>Automatika i elektronika</span>
+    </a>
+    <a asp-controller="Home" asp-action="Racunarstvo" class="card" style="background-image: url('/slike/ri.jpg');">
+        <div class="overlay"></div>
+        <span>Računarstvo i informatika</span>
+    </a>
+
+    <a asp-controller="Home" asp-action="elektroenergetika"
+       class="card"
+       style="background-image: url('/slike/energetika.jpg');">
+        <div class="overlay"></div>
+        <span>Energetika</span>
+    </a>
+    <a asp-controller="Home" asp-action="Telekomunikacija"
+       class="card"
+       style="background-image: url('/slike/telekomunikacija.jpg');">
+        <div class="overlay"></div>
+        <span>Telekomunikacije</span>
+    </a>
+</section>

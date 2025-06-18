@@ -1,0 +1,109 @@
+﻿
+@model IEnumerable<WebApplication1.Models.Korisnik>
+
+
+@{
+    ViewData["Title"] = "Profesori";
+}
+
+<h1>Profesori</h1>
+
+<p>
+    @* Prikaz linka za kreiranje novog profesora samo ako je korisnik u ulozi Dekan *@
+    @if (User.IsInRole("Dekan"))
+    {
+        <a asp-action="Create" class="btn btn-primary">Dodaj novog profesora</a>
+    }
+</p>
+
+
+
+<section class="profesor-sekcija section">
+    <h2>Lista profesora</h2>
+
+    <table class="table text-light">
+        <thead>
+            <tr>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var profesor in Model)
+            {
+                <tr>
+                    <td>@profesor.Ime</td>
+                    <td>@profesor.Prezime</td>
+                    <td class="text-end">
+                        <button class="btn btn-primary btn-sm me-2"
+                                data-id="@profesor.Id"
+                                onclick="prikaziDetalje(this)">
+                            Details
+                        </button>
+
+                        @if (User.IsInRole("Dekan"))
+                        {
+                            <form asp-action="Delete" asp-route-id="@profesor.Id" method="post" class="d-inline"
+                                  onsubmit="return confirm('Da li ste sigurni da želite obrisati profesora?');">
+                                <button type="submit" class="btn btn-danger btn-sm">Obriši</button>
+                            </form>
+                        }
+                        @if (User.IsInRole("Dekan"))
+                        {
+                            <a asp-action="EditProfesorPredmeti" asp-route-id="@profesor.Id" class="btn btn-warning btn-sm">Edit</a>
+                        }
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content bg-dark text-light">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailsModalLabel">Detalji profesora</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zatvori"></button>
+                </div>
+                <div class="modal-body" id="modalContent">
+                    <div class="text-center">
+                        <div class="spinner-border text-light" role="status"></div>
+                        <p>Učitavanje...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script>
+            function prikaziDetalje(button) {
+                const id = button.getAttribute("data-id");
+                const modal = new bootstrap.Modal(document.getElementById("detailsModal"));
+                const modalContent = document.getElementById("modalContent");
+
+                // Prikaz spinnera dok se učitava
+                modalContent.innerHTML = `
+                    <div class="text-center">
+                        <div class="spinner-border text-light" role="status"></div>
+                        <p>Učitavanje...</p>
+                    </div>`;
+
+                // Učitaj sadržaj iz Details.cshtml
+                fetch('/Profesor/Details/' + id)
+                    .then(response => {
+                        if (!response.ok) throw new Error("Greška u učitavanju detalja.");
+                        return response.text();
+                    })
+                    .then(html => {
+                        modalContent.innerHTML = html;
+                    })
+                    .catch(error => {
+                        modalContent.innerHTML = "<p class='text-danger'>Greška pri učitavanju podataka.</p>";
+                    });
+
+                modal.show();
+            }
+        </script>
+    }

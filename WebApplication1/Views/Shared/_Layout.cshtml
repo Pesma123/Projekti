@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar-left img {
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+            .navbar-left img:hover {
+                transform: scale(1.05);
+            }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #0f1a26;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+            .navbar-left img {
+                height: 50px;
+            }
+
+        .navbar-right {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+            .navbar-right a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+
+                .navbar-right a:hover {
+                    color: #4cc9f0;
+                }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+            .hamburger div {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+            }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #0f1a26;
+            position: absolute;
+            top: 70px;
+            right: 40px;
+            width: 200px;
+            border: 1px solid #1a1a1a;
+        }
+
+            .mobile-menu a {
+                padding: 10px;
+                border-top: 1px solid #1a1a1a;
+                color: white;
+                text-decoration: none;
+            }
+
+                .mobile-menu a:hover {
+                    background-color: #1a1a1a;
+                    color: #4cc9f0;
+                }
+
+        media (max-width: 768px) {
+            .navbar-right
+
+        {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        }</style>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MojFakultet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Navbar partial -->
+    @await Html.PartialAsync("_Navbar")
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const hamburger = document.getElementById("hamburger");
+          const menu = document.getElementById("mobileMenu");
+
+          if (!hamburger || !menu) return;
+
+          hamburger.addEventListener("click", function () {
+            menu.classList.toggle("active");
+          });
+
+          window.addEventListener("click", function (event) {
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+              menu.classList.remove("active");
+            }
+          });
+        });
+    </script>
+</body>
+</html>

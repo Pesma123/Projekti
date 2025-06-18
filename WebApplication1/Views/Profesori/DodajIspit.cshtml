@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.DodajIspitViewModel
+
+@{
+    ViewData["Title"] = "Dodaj ispit";
+}
+
+<h2>Dodaj ispit za predmet: @Model.ImePredmeta</h2>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+
+<form asp-action="DodajIspit" asp-controller="Profesor" method="post">
+    @Html.AntiForgeryToken()
+    <input asp-for="PredmetId" type="hidden" />
+
+    <div class="mb-3">
+        <label asp-for="Datum" class="form-label"></label>
+        <input asp-for="Datum"
+               class="form-control"
+               type="datetime-local"
+               step="60" />
+        <span asp-validation-for="Datum" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Spremi ispit</button>
+    <a asp-action="MojiPredmeti" asp-controller="Profesor" class="btn btn-secondary">
+        Nazad
+    </a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

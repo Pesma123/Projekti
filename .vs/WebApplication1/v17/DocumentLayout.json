@@ -1,0 +1,146 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\views\\profesori\\editprofesorpredmeti.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\profesori\\editprofesorpredmeti.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\controllers\\profesorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\controllers\\profesorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\models\\profesorpredmetimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\profesorpredmetimodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\models\\profesorcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\profesorcreatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\korisnik.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\models\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\models\\profesor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|c:\\users\\pihla\\desktop\\uradjenprojekat\\projekat\\webapplication1\\views\\dekan\\editpredmeti.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DE352FC-8AEE-4FF3-ACC4-A6785820EE97}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\views\\dekan\\editpredmeti.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfesorController.cs",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Controllers\\ProfesorController.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Controllers\\ProfesorController.cs",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Controllers\\ProfesorController.cs",
+              "RelativeToolTip": "WebApplication1\\Controllers\\ProfesorController.cs",
+              "ViewState": "AgIAADIBAAAAAAAAAAA+wCsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T19:47:42.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditProfesorPredmeti.cshtml",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Views\\Profesori\\EditProfesorPredmeti.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Profesori\\EditProfesorPredmeti.cshtml",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Views\\Profesori\\EditProfesorPredmeti.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Profesori\\EditProfesorPredmeti.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T19:42:50.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Korisnik.cs",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\Korisnik.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Korisnik.cs",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\Korisnik.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Korisnik.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T19:35:03.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProfesorCreateModel.cs",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\ProfesorCreateModel.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\ProfesorCreateModel.cs",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\ProfesorCreateModel.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\ProfesorCreateModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T19:34:40.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Profesor.cs",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\Profesor.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\Profesor.cs",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\Profesor.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\Profesor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T19:34:04.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfesorPredmetiModel.cs",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\ProfesorPredmetiModel.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Models\\ProfesorPredmetiModel.cs",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Models\\ProfesorPredmetiModel.cs",
+              "RelativeToolTip": "WebApplication1\\Models\\ProfesorPredmetiModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T19:31:14.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditPredmeti.cshtml",
+              "DocumentMoniker": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Views\\Dekan\\EditPredmeti.cshtml",
+              "RelativeDocumentMoniker": "WebApplication1\\Views\\Dekan\\EditPredmeti.cshtml",
+              "ToolTip": "C:\\Users\\pihla\\Desktop\\UradjenProjekat\\Projekat\\WebApplication1\\Views\\Dekan\\EditPredmeti.cshtml",
+              "RelativeToolTip": "WebApplication1\\Views\\Dekan\\EditPredmeti.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T19:30:37.103Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

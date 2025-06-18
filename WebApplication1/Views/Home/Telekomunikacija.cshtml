@@ -1,0 +1,1426 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odsjek za automatiku i elektroniku</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="navbar.js" defer></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1e2a38;
+            color: white;
+        }
+
+        .section {
+            padding: 80px 10%;
+        }
+
+        .title {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            text-align: center;
+        }
+
+            .title h1 {
+                font-size: 3.5em;
+            }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .cycles {
+            font-size: 2.5em;
+            cursor: pointer;
+            transition: font-size 0.3s ease;
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+            .cycles:hover {
+                font-size: 3em;
+            }
+
+        .cycle-details {
+            display: none;
+            padding-left: 20px;
+            margin-top: 20px;
+        }
+
+            .cycle-details ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .cycle-details li {
+                margin-bottom: 25px;
+            }
+
+        .year {
+            font-size: 1.7em;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+            .year:hover {
+                font-size: 1.9em;
+            }
+
+        .semester {
+            cursor: pointer;
+            font-size: 1.4em;
+            margin: 8px 0 8px 20px;
+            padding-left: 10px;
+        }
+
+        .subjects {
+            display: none;
+            margin-left: 40px;
+            font-size: 1.1em;
+            margin-top: 20px;
+        }
+
+        .subject-card {
+            background-color: #2a3b4d;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .subject-title {
+            font-size: 1.4em;
+            font-weight: bold;
+        }
+
+        .subject-info {
+            font-size: 0.95em;
+            color: #cbd6e2;
+            margin-top: 8px;
+        }
+
+        .ects-wrapper {
+            position: absolute;
+            top: 45px;
+            right: 20px;
+            text-align: center;
+        }
+
+        .ects-circle {
+            background-color: #5dade2;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .ects-label {
+            font-size: 0.75em;
+            margin-top: 4px;
+            color: #d0e4f5;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Include Navbar -->
+    <div id="navbar-container"></div>
+
+    <section class="section title scroll-reveal">
+        <h1>Odsjek za telekomunikacije</h1>
+    </section>
+
+    <section class="section">
+        <!-- Prvi ciklus sa 3 godine i 2 semestra po godini -->
+        <div class="cycles" id="cycle1">Prvi Ciklus</div>
+        <div class="cycle-details" id="cycle1-details">
+            <ul>
+                <li>
+                    <div class="year" id="year1-1">Godina 1</div>
+                    <div class="semesters" id="year1-1-semesters" style="display:none;">
+                        <div class="semester" id="sem1">Semestar 1</div>
+                        <div class="subjects" id="sem1-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Inženjerska Matematika I</div>
+                                <div class="subject-info">
+                                    Profesori: prof. dr. Mickey Mouse<br>
+                                    Predavanja: 49<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove elektrotehnike</div>
+                                <div class="subject-info">
+                                    Profesori: prof. dr. Shrek<br>
+                                    Predavanja: 52<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Inženjerska fizika I</div>
+                                <div class="subject-info">
+                                    Profesori: prof. dr. Mickey Mouse<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Linearna algebra i geometrija</div>
+                                <div class="subject-info">
+                                    Profesori: prof. dr. Lisa Simpson<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove računarstva</div>
+                                <div class="subject-info">
+                                    Profesori: Prof. dr. Mojo Jojo<br>
+                                    Predavanja: 44<br>
+                                    Vježbe: 26<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="semester" id="sem2">Semestar 2</div>
+                        <div class="subjects" id="sem2-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Inženjerska Matematika II</div>
+                                <div class="subject-info">
+                                    Profesori: Prof. dr. Mickey Mouse<br>
+                                    Predavanja: 52<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Tehnike Programiranja</div>
+                                <div class="subject-info">
+                                    Profesori: doc.dr. Munjeviti Jurić<br>
+                                    Predavanja: 44<br>
+                                    Vježbe: 26<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Električni krugovi I</div>
+                                <div class="subject-info">
+                                    Profesori: Prof. dr. Scooby Doo<br>
+                                    Predavanja: 45<br>
+                                    Vježbe: 10<br>
+                                    Tip: Izborni 2.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Inženjerska Fizika II</div>
+                                <div class="subject-info">
+                                    Profesori: Prof. dr. Scooby Doo<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 0<br>
+                                    Tip: Izborni 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Elektronički elementi i sklopovi</div>
+                                <div class="subject-info">
+                                    Profesori: Prof. dr. Pink Panther<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 0<br>
+                                    Tip: Izborni 2.3
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="year" id="year1-2">Godina 2</div>
+                    <div class="semesters" id="year1-2-semesters" style="display:none;">
+                        <div class="semester" id="sem3">Semestar 3</div>
+                        <div class="subjects" id="sem3-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Teorija elektromagnetnih polja</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Luffy <br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 0<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Električni krugovi 2</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Scooby Doo<br>
+                                    Predavanja: 49<br>
+                                    Vježbe: 6<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Elektronika TK 1</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Homer Simpson<br>
+                                    Predavanja: 30<br>
+                                    Vježbe: 20<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Teorija informacija i izvorno kodiranje</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Levi Ackerman<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 6<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Teorija signala</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Edward Elric<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Operativni sistemi</div>
+                                <div class="subject-info">
+                                    Profesor: prof. dr. Shrek<br>
+                                    Predavanja: 30<br>
+                                    Vježbe: 10<br>
+                                    Tip: Izborni 3.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Inženjerska ekonomika</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Mojo Jojo<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 0<br>
+                                    Tip: Izborni 3.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove elektroenergetskih sistema</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Phineas<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 0<br>
+                                    Tip: Izborni 3.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="semester" id="sem4">Semestar 4</div>
+                        <div class="subjects" id="sem4-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Statistička teorija signala</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Goku<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 7<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Elektronika TK 2</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Homer Simpson<br>
+                                    Predavanja: 30<br>
+                                    Vježbe: 20<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove optoelektronike</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Tweety Bird<br>
+                                    Predavanja: 36<br>
+                                    Vježbe: 7<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Antene i prostiranje talasa</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Goku<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 11<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Telekomunikacione tehnike 1</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Luffy<br>
+                                    Predavanja: 52<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Objektno orijentisana analiza i dizajn</div>
+                                <div class="subject-info">
+                                    Profesor: doc. dr. Donatello<br>
+                                    Predavanja: 26<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 4.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">3</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove baza podataka</div>
+                                <div class="subject-info">
+                                    Profesor: prof. dr. Megamind<br>
+                                    Predavanja: 26<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 4.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">3</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Osnove sistema automatskog upravljanja</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Professor Utonium<br>
+                                    Predavanja: 26<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 4.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">3</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="year" id="year1-3">Godina 3</div>
+                    <div class="semesters" id="year1-3-semesters" style="display:none;">
+                        <div class="semester" id="sem5">Semestar 5</div>
+                        <div class="subjects" id="sem5-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Telekomunikacione tehnike II</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Luffy<br>
+                                    Predavanja: 48<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Radiotehnika</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Levi Ackerman<br>
+                                    Predavanja: 30<br>
+                                    Vježbe: 12<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Mobilne komunikacije</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Edward Elric<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Kanalno kodiranje</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Peter Griffin<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 13<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Mjerenja u telekomunikacijama</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Homer Simpson<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 13<br>
+                                    Tip: Izborni 5.1 ili 5.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                            <div class="subject-card">
+                                <div class="subject-title">Softverski inženjering</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Levi Ackerman<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 20<br>
+                                    Tip: Izborni 5.1 ili 5.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Nove generacije mreža i usluga</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Goku<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 6<br>
+                                    Tip: Izborni 5.1 ili 5.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Teorija prometa</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Luffy<br>
+                                    Predavanja: 35<br>
+                                    Vježbe: 10<br>
+                                    Tip: Izborni 5.1 ili 5.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Predmet sa drugih fakulteta</div>
+                                <div class="subject-info">
+                                    Profesor: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Izborni 5.1 ili 5.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="semester" id="sem6">Semestar 6</div>
+                        <div class="subjects" id="sem6-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Mikrovalni komunikacijski sistemi</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Spike Spiegel<br>
+                                    Predavanja: 29<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Komutacioni sistemi</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Peter Griffin<br>
+                                    Predavanja: 40<br>
+                                    Vježbe: 7<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Komunikacijski protokoli i mreže</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Homer Simpson<br>
+                                    Predavanja: 40<br>
+                                    Vježbe: 13<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Osnovi signalizacionih protokola</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Daffy Duck<br>
+                                    Predavanja: 29<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 6.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Elektrotehnički materijali</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Leonardo<br>
+                                    Predavanja: 29<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 6.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Organizacija i osnove upravljanja mrežom</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Spike Spiegel<br>
+                                    Predavanja: 29<br>
+                                    Vježbe: 7<br>
+                                    Tip: Izborni 6.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Tehnologije televizije</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Naruto Uzumaki<br>
+                                    Predavanja: 29<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 6.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Predmet sa drugih fakulteta</div>
+                                <div class="subject-info">
+                                    Profesor: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Izborni 6.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Drugi ciklus sa 2 godine -->
+        <div class="cycles" id="cycle2">Drugi Ciklus</div>
+        <div class="cycle-details" id="cycle2-details">
+            <ul>
+                <li>
+                    <div class="year" id="year2-1">Godina 1</div>
+                    <div class="semesters" id="year2-1-semesters" style="display:none;">
+                        <div class="semester" id="sem7">Semestar 1</div>
+                        <div class="subjects" id="sem7-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Simulacija procesa u telekomunikacijskom kanalu</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Edward Elric<br>
+                                    Predavanja: 38<br>
+                                    Vježbe: 28<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Arhitekture paketskih čvorišta</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Naruto Uzumak<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Optički telekomunikacioni sistemi</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Daffy Duck<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Simulacija procesa u telekomunikacijskim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Peter Griffin<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 28<br>
+                                    Tip: Izborni 7.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Telekomunikacijski softver inženjering</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Inspector Gadget<br>
+                                    Predavanja: 39<br>
+                                    Vježbe: 12<br>
+                                    Tip: Izborni 7.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="semester" id="sem8">Semestar 2</div>
+                        <div class="subjects" id="sem8-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Kriptografija i sigurnost sistema</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Saitama<br>
+                                    Predavanja: 38<br>
+                                    Vježbe: 28<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Kvaliteta usluge u telekomunikacijskim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Naruto Uzumaki<br>
+                                    Predavanja: 38<br>
+                                    Vježbe: 28<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredna poglavlja iz procesiranja signala</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Luffy<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 24<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Kompresija slike i videa</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Goku<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 8.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Tehnologija pristupnih bežičnih mreža</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Saitama<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 14<br>
+                                    Tip: Izborni 8.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="year" id="year2-2">Godina 2</div>
+                    <div class="semesters" id="year2-2-semesters" style="display:none;">
+                        <div class="semester" id="sem9">Semestar 3</div>
+                        <div class="subjects" id="sem9-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Upravljanje telekomunikacijskim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Inspector Gadget<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 24<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">7</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Mrežni multimedijalni servisi</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Elmer Fudd<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 24<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Sistemi i servisi mobilnih telekomunikacija</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Sailor Moon<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Sistemski aspekti u telekomunikacijama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Spike Spiegel<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 14<br>
+                                    Tip:  Izborni 9.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Softverski dizajn protokola</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Saitama<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 25<br>
+                                    Tip: Izborni 9.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="semester" id="sem10">Semestar 4</div>
+                        <div class="subjects" id="sem10-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Napredni telekomunikacijski protokoli i mreže nove generacije</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Peter Griffin<br>
+                                    Predavanja: 42<br>
+                                    Vježbe: 14<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">6</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredna poglavlja u analizi IP saobraćaja</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Daffy Duck<br>
+                                    Predavanja: 28<br>
+                                    Vježbe: 25<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">5</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Poslovni modeli u telekomunikacijama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Elmer Fudd<br>
+                                    Predavanja: 32<br>
+                                    Vježbe: 11<br>
+                                    Tip: Izborni 10.1
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">4</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Završni rad</div>
+                                <div class="subject-info">
+                                    Profesor: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">15</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Treći ciklus sa 3 godine -->
+        <div class="cycles" id="cycle3">Treći Ciklus</div>
+        <div class="cycle-details" id="cycle3-details">
+            <ul>
+                <li>
+                    <div class="year" id="year3-1">Godina 1</div>
+                    <div class="semesters" id="year3-1-semesters" style="display:none;">
+                        <div class="semester" id="sem11">Semestar 1</div>
+                        <div class="subjects" id="sem11-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Aktuelni pravci zaštitnog kodiranja</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Inspector Gadget<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredne teorijske metode u analizi telekom. mreža i sistema</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Homer Simpson<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredna teorija elektromagnetnih polja</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Spike Spiegel <br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Rutiranje u telekomunikacijskim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Saitama<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredne tehnike u analizi informacijskih mreža</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Sailor Moon<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Optička transmisijska mreža</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Naruto Uzumaki<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Digitalna obrada govornog signala</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Elmer Fudd<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 1.1 ili 1.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <!-- Naučnoistraživački seminar -->
+                            <div class="subject-card">
+                                <div class="subject-title">Naučnoistraživački seminar 1.1</div>
+                                <div class="subject-info">
+                                    Profesor: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">14</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="semester" id="sem12">Semestar 2</div>
+                        <div class="subjects" id="sem12-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Napredne simulacijske metode u telekomunikacijama</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Edward Elric<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Odabrana poglavlja MIMO sistema</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Levi Ackerman <br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Napredna poglavlja iz sigurnosti u savremenim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Doc. dr. Goku<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Multirezolucijska analiza signala</div>
+                                <div class="subject-info">
+                                    Profesor: Dr. sc. Sailor Moon<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Signalizacioni protokoli</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Spike Spiegel<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Višeslojna testiranja integralne kvalitete usluge u multiservisnim mrežama</div>
+                                <div class="subject-info">
+                                    Profesor: Prof. dr. Peter Griffin<br>
+                                    Predavanja: 15<br>
+                                    Vježbe: 15<br>
+                                    Tip: Izborni 2.1 ili 2.2
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">8</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <!-- Naučnoistraživački seminar 1.2 -->
+                            <div class="subject-card">
+                                <div class="subject-title">Naučnoistraživački seminar 1.2</div>
+                                <div class="subject-info">
+                                    Profesor: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezni
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">14</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="year" id="year3-2">Godina 2</div>
+                    <div class="semesters" id="year3-2-semesters" style="display:none;">
+                        <div class="semester" id="sem13">Semestar 3</div>
+                        <div class="subjects" id="sem13-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Naučnoistraživački seminar 2.1</div>
+                                <div class="subject-info">
+                                    Profesori: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">18</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+
+                            <div class="subject-card">
+                                <div class="subject-title">Priprema i odbrana teme doktorske disertacije (projekta)</div>
+                                <div class="subject-info">
+                                    Profesori: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">12</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="semester" id="sem14">Semestar 4</div>
+                        <div class="subjects" id="sem14-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">NIR: Priprema radne verzije doktorske disertacije</div>
+                                <div class="subject-info">
+                                    Profesori: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">30</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="year" id="year3-3">Godina 3</div>
+                    <div class="semesters" id="year3-3-semesters" style="display:none;">
+                        <div class="semester" id="sem15">Semestar 5</div>
+                        <div class="subjects" id="sem15-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">NIR: Prezentacija radne verzije doktorske disertacije</div>
+                                <div class="subject-info">
+                                    Profesori: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">30</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="semester" id="sem16">Semestar 6</div>
+                        <div class="subjects" id="sem16-subjects">
+                            <div class="subject-card">
+                                <div class="subject-title">Odbrana doktorske disertacije</div>
+                                <div class="subject-info">
+                                    Profesori: /<br>
+                                    Predavanja: /<br>
+                                    Vježbe: /<br>
+                                    Tip: Obavezan
+                                </div>
+                                <div class="ects-wrapper">
+                                    <div class="ects-circle">30</div>
+                                    <div class="ects-label">ECTS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        src="navbar.js"
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            }
+          });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+          observer.observe(el);
+        });
+
+        document.querySelectorAll('.cycles').forEach(cycle => {
+          cycle.addEventListener('click', function () {
+            const detailsId = this.id + '-details';
+            const cycleDetails = document.getElementById(detailsId);
+            cycleDetails.style.display = cycleDetails.style.display === 'block' ? 'none' : 'block';
+          });
+        });
+
+        document.querySelectorAll('.year').forEach(year => {
+          year.addEventListener('click', function () {
+            const yearSemesters = document.getElementById(this.id + '-semesters');
+            if (yearSemesters) {
+              yearSemesters.style.display = yearSemesters.style.display === 'block' ? 'none' : 'block';
+            }
+          });
+        });
+
+        document.querySelectorAll('.semester').forEach(semester => {
+          semester.addEventListener('click', function () {
+            const subjects = document.getElementById(this.id + '-subjects');
+            if (subjects) {
+              subjects.style.display = subjects.style.display === 'block' ? 'none' : 'block';
+            }
+          });
+        });
+    </script>
+</body>
+</html>

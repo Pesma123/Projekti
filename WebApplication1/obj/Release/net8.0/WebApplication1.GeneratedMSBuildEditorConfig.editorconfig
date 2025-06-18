@@ -1,0 +1,261 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = WebApplication1
+build_property.RootNamespace = WebApplication1
+build_property.ProjectDir = C:\Users\pihla\Desktop\UradjenProjekat\Projekat\WebApplication1\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\pihla\Desktop\UradjenProjekat\Projekat\WebApplication1
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Dekan/CreateStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVrYW5cQ3JlYXRlU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Dekan/DeleteStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVrYW5cRGVsZXRlU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Dekan/EditPredmeti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVrYW5cRWRpdFByZWRtZXRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Dekan/PregledStudenata.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVrYW5cUHJlZ2xlZFN0dWRlbmF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Automatika.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBdXRvbWF0aWthLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/elektroenergetika.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxlbGVrdHJvZW5lcmdldGlrYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Odsjeci.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxPZHNqZWNpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Racunarstvo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSYWN1bmFyc3R2by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Home/Telekomunikacija.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWxla29tdW5pa2FjaWphLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Ispit/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNwaXRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Ispit/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNwaXRcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Ispit/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNwaXRcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Ispit/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNwaXRcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Ispit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXNwaXRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Izvjestaj/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Izvjestaj/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Izvjestaj/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Izvjestaj/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Izvjestaj/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXp2amVzdGFqXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Javni/PrikazUspijeha.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmF2bmlcUHJpa2F6VXNwaWplaGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Javni/UnosKoda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmF2bmlcVW5vc0tvZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Notifikacija/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2FjaWphXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Notifikacija/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2FjaWphXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Notifikacija/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2FjaWphXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Notifikacija/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2FjaWphXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Notifikacija/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90aWZpa2FjaWphXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Predmet/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZG1ldFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Predmet/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZG1ldFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Predmet/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZG1ldFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Predmet/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZG1ldFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Predmet/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlZG1ldFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/DodajIspit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXERvZGFqSXNwaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/EditProfesorPredmeti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXEVkaXRQcm9mZXNvclByZWRtZXRpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/MojiPredmeti.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXE1vamlQcmVkbWV0aS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Profesori/UpisStudentaNaPredmet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmVzb3JpXFVwaXNTdHVkZW50YU5hUHJlZG1ldC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Shared/_Navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OYXZiYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Student/IspisPotvrda.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJc3Bpc1BvdHZyZGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Student/PrijavaIspita.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxQcmlqYXZhSXNwaXRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Student/Uspjeh.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVc3BqZWguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/pihla/Desktop/UradjenProjekat/Projekat/WebApplication1/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-bddmc6yalx

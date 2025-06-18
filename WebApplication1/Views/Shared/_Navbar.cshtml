@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Korisnik> SignInManager
+
+<div class="navbar">
+    <!-- LOGO / HOME -->
+    <div class="navbar-left">
+        <a asp-controller="Home" asp-action="Index">
+            <img src="~/slike/logo_etf.svg" alt="ETF Logo" />
+        </a>
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <div class="navbar-right">
+        @if (!SignInManager.IsSignedIn(User))
+        {
+            <!-- GUEST -->
+            <a class="nav-link text-white" asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a class="nav-link text-white" asp-controller="Profesor" asp-action="Index">Profesori</a>
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        }
+        else
+        {
+            @* STUDENT *@
+            @if (User.IsInRole("Student"))
+            {
+                <a class="nav-link text-white" asp-controller="Student" asp-action="Uspjeh">
+                    Uspjeh
+                </a>
+                <a class="nav-link text-white" asp-controller="Student" asp-action="PrijavaIspita">
+                    Prijava ispita
+                </a>
+                <a class="nav-link text-white" asp-controller="Student" asp-action="IspisPotvrda">
+                    Ispis potvrda
+                </a>
+            }
+
+            @* PROFESOR *@
+            @if (User.IsInRole("Profesor"))
+            {
+                <a class="nav-link text-white" asp-controller="Profesor" asp-action="MojiPredmeti">
+                    Moji Predmeti
+                </a>
+            }
+
+            @* DEKAN *@
+            @if (User.IsInRole("Dekan"))
+            {
+                <a class="nav-link text-white" asp-controller="Dekan" asp-action="PregledStudenata">
+                    Pregled studenata
+                </a>
+            }
+
+            @* COMMON *@
+            <a class="nav-link text-white" asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a class="nav-link text-white" asp-controller="Profesor" asp-action="Index">Profesori</a>
+
+            @* LOGOUT *@
+            <form class="d-inline"
+                  asp-area="Identity"
+                  asp-page="/Account/Logout"
+                  asp-route-returnUrl="~/"
+                  method="post">
+                <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
+            </form>
+        }
+    </div>
+
+    <!-- HAMBURGER ICON -->
+    <div class="hamburger" id="hamburger">
+        <div></div><div></div><div></div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        @if (!SignInManager.IsSignedIn(User))
+        {
+            <!-- GUEST -->
+            <a asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a asp-controller="Profesor" asp-action="Index">Profesori</a>
+            <a asp-area="Identity" asp-page="/Account/Login">Login</a>
+        }
+        else if (User.IsInRole("Student"))
+        {
+            <a asp-controller="Student" asp-action="Uspjeh">Uspjeh</a>
+            <a asp-controller="Student" asp-action="PrijavaIspita">Prijava ispita</a>
+            <a asp-controller="Student" asp-action="IspisPotvrda">Ispis potvrda</a>
+            <a asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a asp-controller="Profesor" asp-action="Index">Profesori</a>
+            <form method="post"
+                  asp-area="Identity"
+                  asp-page="/Account/Logout"
+                  asp-route-returnUrl="~/">
+                <button type="submit">Logout</button>
+            </form>
+        }
+        else if (User.IsInRole("Profesor"))
+        {
+            <a asp-controller="Profesor" asp-action="MojiPredmeti">Moji Predmeti</a>
+            <a asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a asp-controller="Profesor" asp-action="Index">Profesori</a>
+            <form method="post"
+                  asp-area="Identity"
+                  asp-page="/Account/Logout"
+                  asp-route-returnUrl="~/">
+                <button type="submit">Logout</button>
+            </form>
+        }
+        else if (User.IsInRole("Dekan"))
+        {
+            <a asp-controller="Dekan" asp-action="PregledStudenata">Pregled studenata</a>
+            <a asp-controller="Home" asp-action="Odsjeci">Odsjeci</a>
+            <a asp-controller="Profesor" asp-action="Index">Profesori</a>
+            <form method="post"
+                  asp-area="Identity"
+                  asp-page="/Account/Logout"
+                  asp-route-returnUrl="~/">
+                <button type="submit">Logout</button>
+            </form>
+        }
+    </div>
+</div>

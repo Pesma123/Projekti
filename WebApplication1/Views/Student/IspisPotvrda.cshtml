@@ -1,0 +1,37 @@
+﻿@model WebApplication1.Models.PotvrdaViewModel
+
+@{
+    ViewData["Title"] = "Ispis potvrda";
+}
+
+<div class="container py-4 text-white">
+    <h2>Ispis potvrde</h2>
+
+    <form asp-action="IspisPotvrda" method="post" class="mb-4">
+        <div class="mb-3">
+            <label for="svrhaPotvrde" class="form-label">Svrha potvrde</label>
+            <select asp-for="SvrhaPotvrde" class="form-select">
+                <option value="">-- Odaberite svrhu --</option>
+                <option>Stipendija</option>
+                <option>Dom</option>
+                <option>Zdravstveno osiguranje</option>
+                <option>Prijava boravka</option>
+                <option>Ostalo</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generiši potvrdu</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(Model.TekstPotvrde))
+    {
+        <div class="alert alert-success">
+            <h5>Generisana potvrda:</h5>
+            <p>@Model.TekstPotvrde</p>
+            <form asp-action="GenerisiPdf" method="post">
+                <input type="hidden" name="svrhaPotvrde" value="@Model.SvrhaPotvrde" />
+                <button type="submit" class="btn btn-secondary mt-2">Preuzmi PDF</button>
+            </form>
+        </div>
+    }
+</div>

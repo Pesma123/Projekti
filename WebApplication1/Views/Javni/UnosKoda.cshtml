@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Unos broja indeksa";
+}
+
+<h2>Unos broja indeksa</h2>
+
+<form asp-controller="Javni" asp-action="PrikazUspijeha" method="post">
+    <div class="form-group">
+        <label for="brojIndeksa">Broj indeksa:</label>
+        <input type="text" class="form-control" id="brojIndeksa" name="brojIndeksa" required />
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Potvrdi indeks</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="text-danger mt-2">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <p>@error.ErrorMessage</p>
+        }
+    </div>
+}

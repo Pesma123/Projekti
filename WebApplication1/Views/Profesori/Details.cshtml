@@ -1,0 +1,26 @@
+﻿@model WebApplication1.Models.Korisnik
+@{
+    Layout = null;
+}
+<h2>Detalji profesora</h2>
+
+<div>
+    <p><strong>Ime:</strong> @Model.Ime</p>
+    <p><strong>Prezime:</strong> @Model.Prezime</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+
+    <h4>Predmet:</h4>
+    @if (Model.KorisnikPredmet != null && Model.KorisnikPredmet.Any())
+    {
+        <ul>
+            @foreach (var kp in Model.KorisnikPredmet)
+            {
+                <li>@kp.Predmet.ImePredmeta</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>Profesor nema dodeljen predmet.</p>
+    }
+</div>

@@ -1,0 +1,65 @@
+﻿@using WebApplication1.Models
+@model IEnumerable<Korisnik>
+
+<h2 class="text-white">Pregled Studenata</h2>
+
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Email</th>
+            <th>Index</th>
+            <th>Predmeti (ocjene)</th>
+            <th>Akcije</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Ime</td>
+                <td>@student.Prezime</td>
+                <td>@student.Email</td>
+                <td>@student.Indeks</td>
+                <td>
+                    @if (student.KorisnikPredmet?.Any() == true)
+                    {
+                        @string.Join(", ",
+                        student.KorisnikPredmet
+                        .Select(kp =>
+                        $"{kp.Predmet.ImePredmeta} " +
+                        $"({(kp.Ocjena.HasValue ? kp.Ocjena.Value.ToString() : "-")})"
+                        )
+                                )
+                                }
+                    else
+                    {
+                        <em>–</em>
+                    }
+                </td>
+                <td>
+                    <a asp-action="EditPredmeti"
+                       asp-route-id="@student.Id"
+                       class="btn btn-sm btn-primary me-1">
+                        Uredi predmete
+                    </a>
+                    <form method="post"
+                          asp-action="DeleteStudent"
+                          asp-route-id="@student.Id"
+                          class="d-inline">
+                        <button type="submit"
+                                class="btn btn-sm btn-danger"
+                                onclick="return confirm('Obriši studenta?');">
+                            Obriši
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("CreateStudent", "Dekan")" class="btn btn-primary">
+    Dodaj Studenta
+</a>

@@ -1,0 +1,90 @@
+﻿@model WebApplication1.Models.StudentPredmetiModel
+
+@{
+    Layout = null; // ili koristi tvoj Layout ako želiš navbar itd.
+}
+
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="utf-8" />
+    <title>Uspjeh studenta</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 70%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: #2a2a40;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #3e3e5e;
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background-color: #353545;
+        }
+
+        tr:hover {
+            background-color: #44445c;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Uspjeh studenta: @Model.ImePrezime</h2>
+
+    @if (Model.Predmeti == null || !Model.Predmeti.Any())
+    {
+        <p>Student nema ocjene.</p>
+    }
+    else
+    {
+        <table>
+            <thead>
+                <tr>
+                    <th>Predmet</th>
+                    <th>Ocjena</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Predmeti)
+                {
+                    <tr>
+                        <td>@item.ImePredmeta</td>
+                        <td>@(item.Ocjena.HasValue ? item.Ocjena.Value.ToString() : "Nema ocjenu")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>
+</html>

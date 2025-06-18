@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MojFakultet</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <!-- Umjesto <header>... koristi ovo -->
+    <div id="navbar-container"></div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <!-- JavaScript za učitavanje navbar.html -->
+    <script>
+        fetch('/Views/Shared/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = data;
+                const styleTag = tempDiv.querySelector('style');
+                if (styleTag) {
+                    document.head.appendChild(styleTag);
+                }
+
+                initNavbarMenu();
+            })
+            .catch(error => {
+                console.error('Greška pri učitavanju navigacije:', error);
+            });
+
+        function initNavbarMenu() {
+            const hamburger = document.getElementById("hamburger");
+            const menu = document.getElementById("mobileMenu");
+
+            if (!hamburger || !menu) return;
+
+            hamburger.addEventListener("click", function () {
+                menu.classList.toggle("active");
+            });
+
+            window.addEventListener("click", function (event) {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    menu.classList.remove("active");
+                }
+            });
+        }
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

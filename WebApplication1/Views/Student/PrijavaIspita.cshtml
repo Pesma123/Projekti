@@ -1,0 +1,49 @@
+﻿@model List<WebApplication1.Models.IspitPrijavaModel>
+
+@{
+    ViewData["Title"] = "Prijava ispita";
+    Layout = "_Layout";
+}
+
+<h2 class="text-white mb-4">Prijava ispita</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">
+        Nemate ispita za prijavu.
+    </div>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var isp in Model)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center
+                           @(isp.Prijavljen ? "list-group-item-success" : "")">
+                <div>
+                    <strong>@isp.ImePredmeta</strong>
+                    <span class="ms-3">@isp.Datum.ToString("dd.MM.yyyy HH:mm")</span>
+                </div>
+                <div>
+                    @if (!isp.Prijavljen)
+                    {
+                        <form asp-action="PrijaviIspit" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="ispitId" value="@isp.IspitId" />
+                            <button class="btn btn-sm btn-primary">Prijavi</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <span class="badge bg-success me-2">Prijavljen</span>
+                        <form asp-action="OdjaviIspit" method="post" class="d-inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="ispitId" value="@isp.IspitId" />
+                            <button class="btn btn-sm btn-danger">Odjavi</button>
+                        </form>
+                    }
+                </div>
+            </li>
+        }
+    </ul>
+}

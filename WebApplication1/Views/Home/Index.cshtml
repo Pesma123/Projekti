@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Početna";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Početna - Elektrotehnički fakultet</title>
+
+    <!-- Link na tvoj eksterni CSS fajl -->
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <!-- Google font (Arial je sistemski font, ali ako hoćeš drugi možeš uključiti ovdje) -->
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <section class="section welcome">
+        <div class="welcome-text scroll-reveal">
+            <h1>Dobrodošli na stranicu Elektrotehničkog fakulteta u Sarajevu</h1>
+            <p>Na Elektrotehničkom fakultetu u Sarajevu gradimo budućnost kroz znanje i inovaciju. Otkrijte naše studijske programe i profesore koji predano rade na njihovoj realizaciji.</p>
+        </div>
+        <img src="slike/etf_zgrada.jpg" alt="ETF zgrada" />
+    </section>
+
+    <section class="section about-section">
+        <div class="about-img scroll-reveal">
+            <img src="slike/o_nama.jpg" alt="ETF slika" />
+        </div>
+        <div class="about-text scroll-reveal">
+            <h2>O fakultetu</h2>
+            <strong>Elektrotehnički fakultet Univerziteta u Sarajevu predstavlja najstariju i najveću visokoškolsku ustanovu u Bosni i Hercegovini koja školuje kadrove iz različitih oblasti elektrotehnike i računarstva.</strong>
+            <p>Elektrotehnički fakultet osnovan je 1961. godine. Od 1962. godine rade dva odsjeka: Odsjek za elektroenergetiku i Odsjek za automatiku i elektroniku. Odsjek za informatiku je formiran 1972. godine, a Odsjek za telekomunikacije 1976. godine.</p>
+            <p>Osim aktivnosti u svojoj osnovnoj edukativnoj djelatnosti, Elektrotehnički fakultet je od svog osnutka pa sve do danas bio i ostao mjesto intenzivnog naučnoistraživačkog rada i ostalih aktivnosti vezanih za promociju nauke i tehnologije.</p>
+        </div>
+    </section>
+
+    <section class="section map-section">
+        <div class="map-text scroll-reveal">
+            <h2>Gdje se nalazimo?</h2>
+            <p>Elektrotehnički fakultet Sarajevo,</p>
+            <p>Kampus Univerziteta u Sarajevu,</p>
+            <p>Zmaja od Bosne bb,</p>
+            <p>71000 Sarajevo</p>
+        </div>
+        <div class="map-container">
+            <iframe src="https://maps.google.com/maps?q=Elektrotehnički%20fakultet%20Sarajevo&t=&z=17&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <h2>Kako nas kontaktirati?</h2>
+        <p>Možete nas kontaktirati putem:</p>
+        <p><strong>Telefon:</strong> +387 33 250 700</p>
+        <p><strong>Fax:</strong> +387 33 250 725</p>
+        <p><strong>Email:</strong> etf@etf.unsa.ba</p>
+    </footer>
+
+    <script src="navbar.js"></script>
+    <script>
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

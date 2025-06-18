@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Korisnik>
+@{
+    var predmetId = (int)ViewBag.PredmetId;
+}
+
+<h2 class="text-white">Upiši studenta na predmet</h2>
+
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>Ime</th>
+            <th>Prezime</th>
+            <th>Upiši</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.Ime</td>
+                <td>@student.Prezime</td>
+                <td>
+                    <form method="post" asp-action="UpisiStudentaNaPredmet">
+                        <input type="hidden" name="studentId" value="@student.Id" />
+                        <input type="hidden" name="predmetId" value="@predmetId" />
+                        <button type="submit" class="btn btn-success">Upiši</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
