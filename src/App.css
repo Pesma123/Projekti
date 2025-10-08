@@ -1,38 +1,109 @@
-.App {
+/* Globalni stilovi i font */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f7f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Glavni kontejner aplikacije */
+.app-main {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+header {
+  background-color: #5d5b7a;
+  color: white;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Kontejner za sve ekrane (Start, Kviz, Rezultat) */
+.quiz-container {
+  padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Pitanje Box */
+.question-box {
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  min-height: 50px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Kontejner za opcije */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Stil za sva dugmad (Start, Opcije, Restart) */
+.start-btn,
+.restart-btn,
+.option-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  font-weight: 600;
+}
+
+/* Stil za opcije */
+.option-btn {
+  background-color: #a4b0be;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.option-btn:hover {
+  background-color: #747d8c;
+  transform: translateY(-2px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Start i Restart dugmad */
+.start-btn,
+.restart-btn {
+  background-color: #5d5b7a;
+  color: white;
+  margin-top: 20px;
+}
+
+.start-btn:hover,
+.restart-btn:hover {
+  background-color: #4a4860;
+}
+
+/* Tekst statusa i rezultata */
+.status-text {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.result-score strong {
+  color: #5d5b7a;
+  font-size: 1.2em;
+}
+
+.result-percentage {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #5cb85c;
+  margin-bottom: 20px;
 }
