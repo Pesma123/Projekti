@@ -1,38 +1,160 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  background: #e7e9ed; /* Svjetlija pozadina */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* min-height umjesto height za bolji responsiv */
+  margin: 0;
+  padding: 20px;
+}
+
+.app {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Malo širi */
+  max-width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-area {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #5d5b7a;
+  outline: none;
+}
+
+button {
+  background-color: #5d5b7a; /* Nova boja */
   color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #4a4860;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Kontrole (Filtriranje i Sortiranje) */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 5px;
+}
+
+.filter-sort select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.task-count {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f7;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.task-list li:hover {
+  background: #ededed;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.task-list li span {
+  flex-grow: 1;
+  text-align: left;
+  color: #333;
+  cursor: pointer;
+  padding-right: 10px;
+  word-break: break-word; /* Za duge tekstove */
+}
+
+/* Stanje "Urađeno" */
+.task-list li.done span {
+  text-decoration: line-through;
+  color: #a0a0a0;
+}
+
+.task-actions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Stil za dugme za brisanje */
+.delete-btn {
+  background-color: #dc3545;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Stil za dugme za prebacivanje */
+.toggle-btn {
+  background-color: #5cb85c;
+  padding: 5px 8px;
+  font-size: 14px;
+}
+
+.toggle-btn:hover {
+  background-color: #449d44;
+}
+
+/* Stil za uređivanje (input polje unutar liste) */
+.edit-input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #5d5b7a;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.empty-message {
+  color: #a0a0a0;
+  margin-top: 20px;
 }
