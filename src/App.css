@@ -1,38 +1,176 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* --- Osnovni Reseti i Font --- */
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 1rem;
+  transition: background-color 1s;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: white; /* Da bi sav tekst na pozadini bio bijel */
+}
+
+.main-title {
+  font-size: 2.25rem; /* 3xl */
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Pozadine (Ovisno o Vremenu/Statusu) --- */
+.bg-clear { background-color: #0ea5e9; } /* sky-500 */
+.bg-clouds { background-color: #6b7280; } /* gray-500 */
+.bg-rain { background-color: #4f46e5; } /* indigo-600 */
+.bg-snow { background-color: #93c5fd; } /* blue-300 */
+.bg-default { background-color: #374151; } /* slate-700 */
+.bg-loading { background-color: #9ca3af; } /* gray-400 */
+.bg-error { background-color: #dc2626; } /* red-600 */
+
+
+/* --- Forma za Pretragu --- */
+.search-form {
+  width: 100%;
+  max-width: 40rem;
+  margin-bottom: 2rem;
+}
+.input-group {
+  display: flex;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.input-field {
+  flex-grow: 1;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  color: #1f2937;
+  transition: all 0.2s;
+}
+.input-field:focus {
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.5); /* fokusni prsten */
+}
+.search-button {
+  background-color: #0284c7; /* bg-sky-600 */
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  border: none;
+}
+.search-button:hover:not(:disabled) {
+  background-color: #0369a1; /* hover:bg-sky-700 */
+}
+.search-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Prikaz Statusa (Učitavanje/Greška) --- */
+.status-display {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.status-box {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.status-loading {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.status-error {
+  background-color: rgba(220, 38, 38, 0.8);
+}
+.status-text {
+  font-size: 1.125rem;
+}
+.loader-spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* --- Kartica s Vremenskom Prognozom (WeatherCard) --- */
+.weather-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 420px;
+}
+.weather-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+.weather-card-details {
+  display: flex;
+  flex-direction: column;
+}
+.city-name-header {
+  font-size: 1.875rem; /* 3xl */
+  font-weight: 800;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+}
+.weather-description {
+  font-size: 1rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+.icon-container {
+  margin-top: 0.25rem;
+}
+.temp-large {
+  font-size: 4.5rem; /* 7xl */
+  font-weight: 300; /* light */
+  color: #1f2937;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+.temp-unit {
+  font-size: 2.25rem; /* 4xl */
+  vertical-align: top;
+}
+
+/* --- Detalji (Vlažnost/Vjetar) --- */
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+.detail-item-container {
+  display: flex;
+  align-items: center;
+  column-gap: 0.75rem;
+  background-color: rgba(249, 250, 251, 0.7);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+}
+.detail-item-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+}
+.detail-item-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
 }
