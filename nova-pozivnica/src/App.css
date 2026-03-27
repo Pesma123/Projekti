@@ -1,0 +1,194 @@
+/* Postavke za cijelu stranicu - osigurava centriranje */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdfaf7; /* Nježna krem pozadina */
+  display: flex;
+  justify-content: center; /* Horizontalno centriranje */
+  align-items: center;     /* Vertikalno centriranje */
+  min-height: 100vh;       /* Puna visina ekrana */
+  overflow-x: hidden;      /* Spriječava vodoravno skrolanje */
+}
+
+/* Glavni kontejner pozivnice (zatvorena koverta i otvorena kartica) */
+.glavni-kontejner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Stil za zatvorenu kovertu - centrirano */
+.koverta-sekcija {
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.koverta-emoji {
+  font-size: 120px; /* Možeš staviti i više ako želiš veću kovertu */
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Stil za otvorenu pozivnicu */
+.pozivnica-kartica {
+  background: white;
+  padding: 80px 80px; /* Malo smo smanjili vertikalni, a povećali horizontalni prostor */
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  max-width: 700px;    /* Povećali smo sa 650 na 700 za "wow" efekat */
+  width: 95%;         /* DODANO % - Ovo je popravilo skučenost! */
+  text-align: center;
+  border: 1px solid #e0d5c1;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Gornja slika (floralni ukras) */
+.floral-header {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Naslov: "Vjenčanje" - Ljepša boja */
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #cda26f; /* Nježna zlatno-smeđa boja */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+/* Povećajmo malo fontove kad je već šira kartica */
+.imena {
+  font-family: 'Alex Brush', cursive;
+  font-size: 4rem;     /* Povećano sa 3.5rem */
+  color: #4a4a4a;
+  margin-top: 0;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.tekst-pozivnice {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.3rem;   /* Povećano sa 1.1rem */
+  color: #888;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Razdvojna linija */
+hr {
+  border: 0;
+  border-top: 1px solid #e0d5c1;
+  width: 80px;
+  margin: 20px auto;
+}
+
+/* Podati: Mjesec, Dan, Sat - Ljepša boja */
+.podaci {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #888; /* Nježnija siva boja */
+  line-height: 1.8;
+  margin-bottom: 50px;
+}
+
+/* RSVP Forma na dnu */
+.rsvp-naslov {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+  padding-top: 30px;
+  color: #cda26f; /* Nježna zlatno-smeđa boja */
+}
+
+.form-grupa {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0d5c1;
+  background: #fafafa;
+  font-family: 'Playfair Display', serif;
+  border-radius: 4px;
+}
+
+.btn-potvrda {
+  background: #cda26f; /* Nježna zlatno-smeđa boja */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  width: 100%;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.btn-potvrda:hover {
+  background: #a9855b; /* Tamnija nijansa za hover */
+}
+.btn-lokacija {
+  display: inline-block;
+  text-decoration: none;
+  color: #cda26f; /* Tvoja zlatna boja */
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  border: 1px solid #cda26f;
+  padding: 8px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn-lokacija:hover {
+  background-color: #cda26f;
+  color: white;
+}
+/* --- PRILAGOĐAVANJE ZA MOBITELE --- */
+@media (max-width: 600px) {
+  .pozivnica-kartica {
+    padding: 50px 20px; /* Manji razmak unutar kartice na mobitelu */
+    width: 95%;         /* Skoro do ivica ekrana */
+    max-width: none;
+  }
+
+  .imena {
+    font-size: 2.8rem;   /* Smanjujemo imena da ne idu u dva reda */
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 1.4rem;   /* Smanjujemo naslov "Vjenčanje" */
+  }
+
+  .tekst-pozivnice, .podaci {
+    font-size: 1rem;     /* Normalna veličina teksta za čitanje na mobitelu */
+    line-height: 1.5;
+  }
+
+  .floral-header {
+    width: 80%;          /* Smanjujemo cvijeće da ne dominira ekranom */
+    margin-bottom: 15px;
+  }
+
+  .koverta-emoji {
+    font-size: 100px;    /* Smanjujemo kovertu za male ekrane */
+  }
+}
