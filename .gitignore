@@ -1,0 +1,30 @@
+venv/
+__pycache__/
+*.pyc
+.DS_Store
+skripta.pdf
+
+# RAG Bot - Q&A nad PDF dokumentima
+
+Lokalni RAG (Retrieval-Augmented Generation) sistem koji odgovara na pitanja na osnovu sadržaja PDF dokumenta, koristeći sentence embeddings, ChromaDB vector store i lokalni LLM (Ollama/Llama 3.2).
+
+## Setup
+
+1. Instaliraj [Ollama](https://ollama.com) i skini model:
+   \`\`\`
+   ollama pull llama3.2
+   \`\`\`
+
+2. Napravi virtualno okruženje i instaliraj zavisnosti:
+   \`\`\`
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+   \`\`\`
+
+3. Stavi svoj PDF u root folder i nazovi ga `skripta.pdf`
+
+4. Pokreni:
+   \`\`\`
+   streamlit run web_app.py
+   \`\`\`
