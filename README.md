@@ -51,7 +51,7 @@ Projekat je čist HTML/CSS/JS bez servera ili instalacije:
 
 ## Mogući dalji koraci
 
-- Deep Q-Network (DQN) verzija koja generalizuje kroz različite labirinte umjesto pamćenja jednog rasporeda ([vidi povezani projekat](#))
+- Deep Q-Network (DQN) verzija koja generalizuje kroz različite labirinte umjesto pamćenja jednog rasporeda 
 - Više ciljeva (agent skuplja više komada sira)
 - Pokretne prepreke
 
