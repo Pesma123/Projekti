@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: #f0f0f0;
+}
+
+canvas {
+    border: 2px solid #333;
+    cursor: pointer;
+    background: white;
+}
+
+.controls {
+    margin-top: 15px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 14px;
+    cursor: pointer;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miš i sir - AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Miš uči da nađe sir 🧀</h1>
+    <p>Klikni na polja da postaviš zidove, ili generiši nasumičan labirint, zatim klikni "Treniraj"</p>
+
+    <canvas id="canvas" width="500" height="500">
+        Vaš browser ne podržava canvas element.
+    </canvas>
+
+    <div id="stats">
+        <p>Epizoda: <span id="epNum">0</span> / <span id="epTotal">0</span></p>
+        <p>Koraci u ovoj epizodi: <span id="stepNum">0</span></p>
+        <p>Epsilon (istraživanje): <span id="epsVal">0</span></p>
+        <p>Prosjek koraka (zadnjih 50): <span id="avgSteps">-</span></p>
+    </div>
+
+    <canvas id="chart" width="500" height="150"></canvas>
+
+    <div class="controls">
+        <button id="btnTrain">Treniraj (1000 epizoda)</button>
+        <button id="btnSkip">Ubrzaj do kraja</button>
+        <button id="btnPlay">Pusti miša (najbolji put)</button>
+        <button id="btnRandom">Generiši nasumičan labirint</button>
+        <button id="btnResetTraining">Resetuj samo trening (zadrži labirint)</button>
+        <button id="btnReset">Resetuj sve</button>
+
+        <label>
+            <input type="checkbox" id="showHeatmap"> Prikaži Q-value heatmap
+        </label>
+
+        <label>
+            Algoritam:
+            <select id="algoSelect">
+                <option value="qlearning">Q-learning</option>
+                <option value="sarsa">SARSA</option>
+            </select>
+        </label>
+
+        <p id="status">Status: čekam...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
